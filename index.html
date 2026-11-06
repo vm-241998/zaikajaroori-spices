@@ -16,14 +16,6 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="assets/bootstrap/css/boostrap.min.css">
 
-	<!-- Slick Slider CSS -->
-	<link rel="stylesheet" type="text/css" href="../../assets/css/slick.css" />
-	<link rel="stylesheet" type="text/css" href="../../assets/css/slick-theme.css" />
-
-	<!-- jQuery + Slick JS -->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
 </head>
 
 <body>
@@ -333,14 +325,12 @@
 								<li><a href="our-mission-and-vision.html">Our Mission and
 										Vision</a></li>
 								<li><a href="funder-team.html">Funder Team</a></li>
-								<li><a href="brands.html">Brands</a></li>
 								<li><a href="complements.html">Complements</a></li>
 								<li><a href="awards-&-certification.html">Certification and
 										Awards</a></li>
 							</ul>
 						</li>
 						
-						<li><a href="index.html">Shop Online</a></li>
 
 						<li><a href="contact.html">Contact</a></li>
 						<!----
@@ -389,7 +379,7 @@
 	</div>
 
 	<section>
-		<div class="swiper-container">
+		<div class="swiper swiper-container pt-3">
 			<div class="swiper-wrapper">
 				<!-- 14 Products -->
 				<div class="swiper-slide">
@@ -443,35 +433,70 @@
 		</div>
 	</section>
 
-	<!-- Swiper.js CDN -->
-	<script src="assets/js/swiper-bundle.min.js"></script>
-	<script>
-		var swiper = new Swiper('.swiper-container', {
-			slidesPerView: 5,
-			spaceBetween: 10,
-			loop: true,
-			autoplay: {
-				delay: 4500,
-				disableOnInteraction: false,
-			},
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-			breakpoints: {
-				1200: { slidesPerView: 7, spaceBetween: 15 },
-				1024: { slidesPerView: 6, spaceBetween: 10 },
-				768: { slidesPerView: 5, spaceBetween: 10 },
-				480: { slidesPerView: 4, spaceBetween: 5 },
-				280: { slidesPerView: 3, spaceBetween: 5 },
-			}
-		});
+<script src="assets/js/swiper-bundle.min.js"></script>
 
-	</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    if (typeof Swiper === "undefined") {
+        console.error("Swiper JS file is not loaded!");
+        return;
+    }
+
+    const swiper = new Swiper(".swiper-container", {
+
+        direction: "horizontal",
+        slidesPerView: 6,
+        slidesPerGroup: 1,
+        spaceBetween: 10,
+
+        loop: true,
+        speed: 600,
+
+        autoplay: {
+            delay: 4500,
+            disableOnInteraction: false
+        },
+
+        allowTouchMove: true,
+        grabCursor: true,
+
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+
+        breakpoints: {
+            280: {
+                slidesPerView: 2,
+                spaceBetween: 5
+            },
+            480: {
+                slidesPerView: 3,
+                spaceBetween: 8
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 10
+            },
+            1024: {
+                slidesPerView: 5,
+                spaceBetween: 10
+            },
+            1200: {
+                slidesPerView: 6,
+                spaceBetween: 12
+            }
+        }
+    });
+
+});
+</script>
 
 	<!-- Hero Section -->
 	<section id="services" class="services">
@@ -506,7 +531,7 @@
 
 	<section class="why-choose-section">
 		<div class="wrapper ">
-			<h1><b class="why-choose-heading">&nbsp; Why Choose <img src="logo/logo.png" alt="">? &nbsp;</b></h1>
+			<h1><b class="why-choose-heading">&nbsp; Why Choose Zaikajaroori? &nbsp;</b></h1>
 			<div class="container pt-5">
 				<div class="row">
 					<div class="col-lg-4 col-md-4 mb-4">
@@ -1207,7 +1232,6 @@
 							<li><a href="index.html">Home</a></li>
 							<li><a href="about.html">About Us</a></li>
 							<li><a href="index.html">Products</a></li>
-							<li><a href="index.html">Shop Online</a></li>
 							<li><a href="contact.html">Contact Us</a></li>
 						</ul>
 
